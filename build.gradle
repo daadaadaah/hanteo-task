@@ -1,0 +1,25 @@
+
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Jackson Databind 라이브러리 의존성
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    // JSON 파싱을 위한 추가적인 의존성 (선택 사항)
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.15.2'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.15.2'
+
+    // junit
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.0'
+}
+
+test {
+    useJUnitPlatform()
+}
